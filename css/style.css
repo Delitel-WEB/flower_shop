@@ -189,6 +189,7 @@ main{
 footer{
 	background-color: #3D3D3D;
 	overflow: hidden;
+	position: relative;
 }
 footer svg{
 	height: 45px;
@@ -214,4 +215,15 @@ footer .telegram:hover svg{
 footer .vk:hover svg{
 	fill: #07f;
 	transition: 0.3s;
+}
+
+/*CREATOR*/
+.creator a{
+	text-decoration: none;
+}
+.creator{
+	position: absolute;
+	right: 0;
+	margin-right: 20px;
+	bottom: 1px;
 }
