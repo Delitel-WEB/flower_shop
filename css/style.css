@@ -311,3 +311,20 @@ footer .vk:hover svg{
 form .row input{
 	margin-bottom: 10px;
 }
+
+
+/* Блок пагинации */
+
+.disabled svg{
+	opacity: 0.7;
+}
+
+.prev-arrow{
+	rotate: 90deg;
+}
+
+.next--arrow{
+	rotate: -90deg;
+}
+
+
