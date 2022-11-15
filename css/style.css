@@ -328,3 +328,66 @@ form .row input{
 }
 
 
+/* Страница товара */
+
+
+.flower-window{
+	border:solid;
+	border-width: 2px;
+	border-radius: 15px;
+	border-width: 1px;
+	border-color: #ABABAB;
+	position: relative;
+}
+
+.flower-inner{
+	border-bottom:solid;
+	border-width: 2px;
+	border-radius: 15px;
+	border-width: 1px;
+	padding: 10px;
+	border-color: #ABABAB;
+
+
+}
+
+.flower-window .titles{
+	margin-left: 20px;
+	position: relative;
+}
+.flower-window .titles h1{
+	color:#00AEFF;
+}
+.flower-preview-small{
+	min-width: 250px;
+	width: 250px;
+}
+
+.flower-window .price{
+	position: absolute;
+	bottom: 0;
+}
+.additionally{
+	position: relative;
+}
+.flower-window .btn{
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+}
+
+.flower-preview-small img{
+	box-shadow: 0 0 4px 0px rgb(0 0 0 / 34%);
+	border:solid;
+	border-radius: 10px;
+	border-width: 1px;
+	border-color: #D7D7D7;
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
+	padding: 5px;
+}
+
+.category .category-name a{
+	text-decoration: none;
+}
