@@ -31,10 +31,9 @@
 
 	</header>
 
-
-	<div id="login-modal" class="modal-win">
+	<div id="register-modal" class="modal-win">
 		<div class="modal-window shadow-lg">
-			<h1>Вход</h1>
+			<h1>Регистрация</h1>
 			<hr>
 			<button easy-toggle="#login-modal" east-remove="show" class="close-btn">X</button>
 			<form action="">
@@ -55,9 +54,31 @@
 						<input type="password" class="form-control" id="inputPassword" placeholder="Подтвердите пароль">
 					</div>
 				</div>
-				<button type="submit" class="btn btn-primary mb-2">Войти</button>
+				<button type="submit" class="btn btn-primary mb-2">Зарегистрироваться</button>
 			</form>
 
+		</div>
+		<div class="overlay" easy-toggle="#register-modal" easy-remove="show"></div>
+
+	</div>
+
+	<div id="login-modal" class="modal-win">
+		<div class="modal-window shadow-lg">
+			<h1>Вход</h1>
+			<hr>
+			<button easy-toggle="#login-modal" east-remove="show" class="close-btn">X</button>
+			<form action="">
+				<div class="row justify-content-center">
+					<div class="col-8">
+						<input type="text" class="form-control" placeholder="Почта">
+					</div>
+					<div class="col-8">
+						<input type="password" class="form-control" id="inputPassword" placeholder="Пароль">
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary mb-2">Войти</button>
+				<a class="register" href="#" easy-toggle="#register-modal" easy-class="show" easy-rcoe>Ещё нет аккаунта?</a>
+			</form>
 		</div>
 
 		<div class="overlay" easy-toggle="#login-modal" easy-remove="show"></div>

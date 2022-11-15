@@ -300,6 +300,11 @@ footer .vk:hover svg{
 	z-index: 998;
 }
 
+.modal-win .modal-window .register{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
 
 /*Формочки*/
 
