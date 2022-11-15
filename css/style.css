@@ -16,14 +16,23 @@ header.scroll{
 	transition: 0.3s;
 }
 
-
-
 header .nav-link.active{
 	background-color: #00AEFF !important;
 }
 
 header .nav-link{
 	color: #00AEFF;
+}
+
+.login-btn{
+	position: absolute;
+	right: 20px;
+	align-items: center;
+	border-width: 2px;
+}
+
+.login-btn a{
+	text-decoration: none;
 }
 
 /*HERO*/
@@ -226,4 +235,74 @@ footer .vk:hover svg{
 	right: 0;
 	margin-right: 20px;
 	bottom: 1px;
+}
+
+
+/* МОДАЛЬНЫЕ ОКНА */
+
+.modal-win{
+	z-index:-1;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top:0;
+	left: 0;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s;
+}
+
+.modal-win.show{
+	opacity: 1;
+	visibility: visible;
+	z-index: 1000;
+	transition: 0.3s;
+}
+
+.modal-win.show .modal-window{
+	transition: 0.3s;
+	margin-top: 0;
+}
+.modal-window{
+	position: relative;
+	background-color: #fff;
+	width: 50%;
+	max-height: 60%;
+	border-radius: 15px;
+	padding: 30px;
+	z-index:999;
+	margin-top: -45px;
+	transition: 0.3s;
+}
+
+
+.modal-window .close-btn{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	border: none;
+	background-color: none;
+	opacity: 0.7;
+}
+
+.modal-window .close-btn:hover{
+	opacity: 1;
+}
+
+.overlay{
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 998;
+}
+
+
+/*Формочки*/
+
+form .row input{
+	margin-bottom: 10px;
 }

@@ -13,6 +13,7 @@
 	<script src="js/scroll_detect.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src=js/custom_slick.js></script>
+	<script src="js/easy-toggler.min.js"></script>
 
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -20,11 +21,47 @@
 	<header class="d-flex justify-content-center py-3">
 		
 		<ul class="nav nav-pills justify-content-center">
-			<li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Главная</a></li>
-			<li class="nav-item"><a href="#" class="nav-link">Магазин</a></li>
+			<li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Главная</a></li>
+			<li class="nav-item"><a href="shop.html" class="nav-link">Магазин</a></li>
 		</ul>
 
+		<div class="login-btn">
+			<button easy-toggle="#login-modal" easy-class="show" easy-rcoe type="button" class="btn btn-outline-primary me-2">Войти</button>
+		</div>
+
 	</header>
+
+
+	<div id="login-modal" class="modal-win">
+		<div class="modal-window shadow-lg">
+			<h1>Вход</h1>
+			<hr>
+			<button easy-toggle="#login-modal" east-remove="show" class="close-btn">X</button>
+			<form action="">
+				<div class="row justify-content-center">
+					<div class="col-5">
+						<input type="text" class="form-control" placeholder="Имя">
+					</div>
+					<div class="col-5">
+						<input type="text" class="form-control" placeholder="Фамилия">
+					</div>
+					<div class="col-5">
+						<input type="text" class="form-control" placeholder="Почта">
+					</div>
+					<div class="col-8">
+						<input type="password" class="form-control" id="inputPassword" placeholder="Пароль">
+					</div>
+					<div class="col-8">
+						<input type="password" class="form-control" id="inputPassword" placeholder="Подтвердите пароль">
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary mb-2">Войти</button>
+			</form>
+
+		</div>
+
+		<div class="overlay" easy-toggle="#login-modal" easy-remove="show"></div>
+	</div>
 
 	<div class="hero">
 		<div class="slides">
