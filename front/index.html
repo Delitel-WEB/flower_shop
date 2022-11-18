@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Цветочек</title>
+	<link rel="icon" href="img/flower.ico">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/scroll_detect.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src=js/custom_slick.js></script>
+	<script src="js/easy-toggler.min.js"></script>
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+	<header class="d-flex justify-content-center py-3">
+		
+		<ul class="nav nav-pills justify-content-center">
+			<li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Главная</a></li>
+			<li class="nav-item"><a href="shop.html" class="nav-link">Магазин</a></li>
+		</ul>
+
+		<div class="login-btn">
+			<button easy-toggle="#login-modal" easy-class="show" easy-rcoe type="button" class="btn btn-outline-primary me-2">Войти</button>
+		</div>
+
+	</header>
+
+	<div id="register-modal" class="modal-win">
+		<div class="modal-window shadow-lg">
+			<h1>Регистрация</h1>
+			<hr>
+			<button easy-toggle="#login-modal" east-remove="show" class="close-btn">X</button>
+			<form action="">
+				<div class="row justify-content-center">
+					<div class="col-5">
+						<input required type="text" class="form-control" placeholder="Имя">
+					</div>
+					<div class="col-5">
+						<input required type="text" class="form-control" placeholder="Фамилия">
+					</div>
+					<div class="col-5">
+						<input required type="text" class="form-control" placeholder="Почта">
+					</div>
+					<div class="col-8">
+						<input required type="password" class="form-control" id="inputPassword" placeholder="Пароль">
+					</div>
+					<div class="col-8">
+						<input required type="password" class="form-control" id="inputPassword" placeholder="Подтвердите пароль">
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary mb-2">Зарегистрироваться</button>
+			</form>
+
+		</div>
+		<div class="overlay" easy-toggle="#register-modal" easy-remove="show"></div>
+
+	</div>
+
+	<div id="login-modal" class="modal-win">
+		<div class="modal-window shadow-lg">
+			<h1>Вход</h1>
+			<hr>
+			<button easy-toggle="#login-modal" east-remove="show" class="close-btn">X</button>
+			<form action="">
+				<div class="row justify-content-center">
+					<div class="col-8">
+						<input required type="text" class="form-control" placeholder="Почта">
+					</div>
+					<div class="col-8">
+						<input required type="password" class="form-control" id="inputPassword" placeholder="Пароль">
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary mb-2">Войти</button>
+				<a class="register" href="#" easy-toggle="#register-modal" easy-class="show" easy-rcoe>Ещё нет аккаунта?</a>
+			</form>
+		</div>
+
+		<div class="overlay" easy-toggle="#login-modal" easy-remove="show"></div>
+	</div>
+
+	<div class="hero">
+		<div class="slides">
+			<div>
+				<div class="titles center bgf">
+					<div class="inner">
+						<h1>Уют</h1>
+						<p>Наши цветы добавят уют вашему дому или двору!</p>
+					</div>
+				</div>
+				<img src="img/hero_1.jpg" alt="">
+			</div>
+			<div>
+				<div class="titles center bgf">
+					<div class="inner">
+						<h1>Разнообразие</h1>
+						<p>У нас вы можете подобрать цветы на любой вкус.</p>
+					</div>
+				</div>
+				<img src="img/hero_4.jpg" alt="">
+			</div>
+			<div>
+				<div class="titles left-side bgf">
+					<div class="inner">
+						<h1>Комфорт</h1>
+						<p>Добавьте комфорт своему дому</p>
+					</div>
+				</div>
+				<img src="img/hero_5.jpg" alt="">
+			</div>
+			<div>
+				<div class="titles left-side bgf black-color">
+					<div class="inner">
+						<h1>Запах счастья</h1>
+						<p>Любой цветок который вы купите будет радовать вас прекрасным ароматом каждый день.</p>
+					</div>
+				</div>
+				<img src="img/hero_7.jpeg" alt="">
+			</div>
+			<div>
+				<div class="titles left-side bgf ">
+					<div class="inner">
+						<h1>Красота природы</h1>
+					</div>
+				</div>
+				<img src="img/hero_9.jpg" alt="">
+			</div>
+			<div>
+				<div class="titles right-side bgf">
+					<div class="inner">
+						<h1>Лофт</h1>
+						<p>Цветы помогут вам украсить скучный интерьер дома.</p>
+					</div>
+				</div>
+				<img src="img/hero_2.jpg" alt="">
+			</div>
+		</div>
+		<div class="hider">
+		</div>
+	</div>
+	<main class="container">
+
+		<div class="advantages">
+			<h1 class="text-center">Наши преимущества</h1>
+			<div class="row justify-content-center">
+				<div class="col-sm-4 col-md-4 advantages-cart">
+					<svg class="cart-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 viewBox="0 0 489.9 489.9" style="enable-background:new 0 0 489.9 489.9;" xml:space="preserve">
+						<circle cx="88.3" cy="361.15" r="43.5"/>
+						<circle cx="388.7" cy="361.15" r="43.5"/>
+						<path d="M396.9,133.75h-89.8v227h18.3c0-35,28.4-63.4,63.4-63.4s63.4,28.4,63.4,63.4h37.7v-98.7L396.9,133.75z M359.9,293.55
+							h-22.5c-5.4,0-9.7-4.3-9.7-9.7c0-5.4,4.3-9.7,9.7-9.7h22.5c5.4,0,9.7,4.3,9.7,9.7C370,289.25,365.4,293.55,359.9,293.55z
+							 M332,254.25v-95.6h52.5l69.2,95.6H332z"/>
+						<path d="M0,361.15h24.9c0-35,28.4-63.4,63.4-63.4s63.4,28.4,63.4,63.4h135.6v-71.5H0V361.15z"/>
+						<path d="M0,85.25v56h58.7v-9.1c0-16.4,19.1-25.5,31.8-15.1l58.6,47.6c9.6,7.8,9.6,22.5-0.1,30.3l-58.6,47.3
+							c-12.8,10.3-31.8,1.2-31.8-15.2v-9.2H0v52.5h287.2v-185H0V85.25z"/>
+						<polygon points="78.6,225.95 136.1,179.65 78.6,133.05 78.6,160.95 0,160.95 0,198.35 78.6,198.35 			"/>
+					</svg>
+
+					<div class="cart-content">
+						<h2>Быстрая доставка</h2>
+						<p>Мы доставляем наши цветы в течении 2-ух дней с момента заказа. В <b>любую</b> точку страны!</p>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-4 advantages-cart">
+					<svg class="cart-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+							<path d="M189.035,166.712c-12.308,0-22.322,10.014-22.322,22.322s10.014,22.322,22.322,22.322s22.322-10.015,22.322-22.322
+								C211.357,176.726,201.343,166.712,189.035,166.712z"/>
+
+							<path d="M322.967,300.644c-12.308,0-22.322,10.014-22.322,22.322c0,12.308,10.014,22.322,22.322,22.322
+								c12.308,0,22.322-10.014,22.322-22.322C345.289,310.658,335.274,300.644,322.967,300.644z"/>
+
+							<path d="M507.154,244.22l-43.447-43.875l15.689-59.721c2.333-8.881-2.923-17.984-11.78-20.403l-59.564-16.273l-16.273-59.564
+								c-2.42-8.857-11.52-14.114-20.403-11.78l-59.72,15.69L267.78,4.846c-6.525-6.461-17.036-6.461-23.56,0l-43.875,43.448
+								l-59.721-15.689c-8.883-2.334-17.983,2.923-20.403,11.78l-16.273,59.564l-59.564,16.273c-8.857,2.42-14.113,11.523-11.78,20.403
+								l15.689,59.721L4.846,244.22c-6.461,6.525-6.461,17.036,0,23.56l43.448,43.875l-15.689,59.721
+								c-2.333,8.881,2.923,17.984,11.78,20.403l59.564,16.273l16.273,59.564c2.42,8.857,11.519,14.114,20.403,11.78l59.721-15.689
+								l43.875,43.448c3.262,3.231,7.521,4.846,11.78,4.846c4.259,0,8.518-1.615,11.78-4.846l43.875-43.448l59.721,15.689
+								c8.882,2.331,17.983-2.923,20.403-11.78l16.273-59.564l59.564-16.273c8.857-2.42,14.113-11.523,11.78-20.403l-15.689-59.721
+								l43.447-43.875C513.615,261.256,513.615,250.745,507.154,244.22z M133.23,189.034c0-30.771,25.034-55.805,55.805-55.805
+								s55.805,25.034,55.805,55.805s-25.034,55.805-55.805,55.805S133.23,219.805,133.23,189.034z M189.711,345.964
+								c-3.269,3.269-7.554,4.904-11.837,4.904c-4.284,0-8.569-1.634-11.837-4.904c-6.538-6.538-6.538-17.138,0-23.676L322.29,166.035
+								c6.537-6.538,17.138-6.538,23.676,0c6.538,6.538,6.538,17.138,0,23.676L189.711,345.964z M322.967,378.771
+								c-30.771,0-55.805-25.034-55.805-55.805c0-30.771,25.034-55.805,55.805-55.805c30.771,0,55.805,25.034,55.805,55.805
+								C378.772,353.737,353.738,378.771,322.967,378.771z"/>
+					</svg>
+					<div class="cart-content">
+						<h2>Цены</h2>
+						<p>Мы всегда радуем наших покупателей низкими ценами и постоянными скидками!</p>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-4 advantages-cart">
+					<svg class="cart-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
+						<path d="M480.46,21.379c-1.598-4.062-3.926-7.692-6.92-10.785c-5.302-5.476-12.241-8.899-19.541-9.639
+							c-63.177-6.382-132.301,19.483-184.893,69.205c-3.563,3.367-8.216,5.222-13.104,5.222c-4.888,0-9.541-1.855-13.102-5.22
+							C190.304,20.44,121.191-5.426,58.005,0.957c-7.302,0.738-14.241,4.161-19.543,9.637c-2.995,3.093-5.324,6.723-6.92,10.786
+							C4.183,90.987,13.957,176.714,57.688,250.702c41.041,69.434,107.008,118.24,175.95,131.489v28.375v10.159
+							c0,38.901,23.057,74.047,58.742,89.538c2.719,1.181,5.55,1.74,8.337,1.74c8.098,0,15.812-4.72,19.244-12.623
+							c4.611-10.621-0.263-22.97-10.884-27.58c-20.355-8.836-33.507-28.884-33.507-51.074v-9.685v-28.358
+							c69.95-12.451,137.151-61.61,178.745-131.981C498.045,176.714,507.819,90.987,480.46,21.379z"/>
+					</svg>
+					<div class="cart-content">
+						<h2>Свежесть</h2>
+						<p>Мы бережно ухаживаем за цветами чтобы они приехали к вам свежими!</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+
+		<div class="recomended">
+			<h1 class="text-center">Рекомендуемые товары</h1>
+
+			<div class="row justify-content-center">
+				<div class="flower-cart col-md-4 col-sm-4">
+					<div class="flower-preview">
+						<img src="img/flower_1.jpg" alt="">
+					</div>
+					<div class="flower-cart-content">
+						<h2 class="text-center">Фиалка трёхцветная</h2>
+						<hr>
+						<p>Травянистое однолетнее или двулетнее растение, распространённое в Европе и умеренных областях Азии; вид рода Фиалка семейства Фиалковые. </p>
+						<div class="price">
+							<h5>1120руб.</h5>
+						</div>
+						<div class="shop-item">
+							<a href="#" title="Перейти к товару">
+								<svg class="next-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									 viewBox="0 0 511.996 511.996" style="enable-background:new 0 0 511.996 511.996;" xml:space="preserve">
+									<path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965
+										H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099
+										c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="flower-cart col-md-4 col-sm-4">
+					<div class="flower-preview">
+						<img src="img/flower_2.jpg" alt="">
+					</div>
+					<div class="flower-cart-content">
+						<h2 class="text-center">Мимулюс</h2>
+						<hr>
+						<p>Мимулюс – чудесное украшение клумб и альпинариев. Его можно выращивать в контейнерах, кашпо и вообще как угодно. </p>
+						<div class="price">
+							<h5>990руб.</h5>
+						</div>
+						<div class="shop-item">
+							<a href="#" title="Перейти к товару">
+								<svg class="next-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									 viewBox="0 0 511.996 511.996" style="enable-background:new 0 0 511.996 511.996;" xml:space="preserve">
+									<path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965
+										H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099
+										c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="flower-cart col-md-4 col-sm-4">
+					<div class="flower-preview">
+						<img src="img/flower_3.jpg" alt="">
+					</div>
+					<div class="flower-cart-content">
+						<h2 class="text-center">Белая лилия</h2>
+						<hr>
+						<p>Растение с многолетней луковицей, которая состоит из мясистых листьев, со стеблем высотой от 70 до 100 см.</p>
+						<div class="price">
+							<h5>3100руб.</h5>
+						</div>
+						<div class="shop-item">
+							<a href="#" title="Перейти к товару">
+								<svg class="next-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									 viewBox="0 0 511.996 511.996" style="enable-background:new 0 0 511.996 511.996;" xml:space="preserve">
+									<path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965
+										H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099
+										c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="flower-cart col-md-4 col-sm-4">
+					<div class="flower-preview">
+						<img src="img/flower_4.jpg" alt="">
+					</div>
+					<div class="flower-cart-content">
+						<h2 class="text-center">Пион</h2>
+						<hr>
+						<p>Род травянистых многолетников и листопадных кустарников. Единственный род семейства Пионовые, ранее род относили к семейству лютиковых.</p>
+						<div class="price">
+							<h5>300руб.</h5>
+						</div>
+						<div class="shop-item">
+							<a href="#" title="Перейти к товару">
+								<svg class="next-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									 viewBox="0 0 511.996 511.996" style="enable-background:new 0 0 511.996 511.996;" xml:space="preserve">
+									<path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965
+										H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099
+										c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+		
+	</main>
+
+
+	<footer class="py-3 mt-auto">
+		<h5 class="text-center text-muted">Наши контакты</h5>
+		<div class="row soc-networks justify-content-center">
+			<div class="vk col-sm-auto">
+				<a href="#">
+					<svg version="1.1" id="Layer_1" fill="#ffff" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 viewBox="0 0 304.36 304.36" style="enable-background:new 0 0 304.36 304.36;" xml:space="preserve"><title>Цветочек в VK</title>
+						<path id="XMLID_807_" style="fill-rule:evenodd;clip-rule:evenodd;" d="M261.945,175.576c10.096,9.857,20.752,19.131,29.807,29.982
+							c4,4.822,7.787,9.798,10.684,15.394c4.105,7.955,0.387,16.709-6.746,17.184l-44.34-0.02c-11.436,0.949-20.559-3.655-28.23-11.474
+							c-6.139-6.253-11.824-12.908-17.727-19.372c-2.42-2.642-4.953-5.128-7.979-7.093c-6.053-3.929-11.307-2.726-14.766,3.587
+							c-3.523,6.421-4.322,13.531-4.668,20.687c-0.475,10.441-3.631,13.186-14.119,13.664c-22.414,1.057-43.686-2.334-63.447-13.641
+							c-17.422-9.968-30.932-24.04-42.691-39.971C34.828,153.482,17.295,119.395,1.537,84.353C-2.01,76.458,0.584,72.22,9.295,72.07
+							c14.465-0.281,28.928-0.261,43.41-0.02c5.879,0.086,9.771,3.458,12.041,9.012c7.826,19.243,17.402,37.551,29.422,54.521
+							c3.201,4.518,6.465,9.036,11.113,12.216c5.142,3.521,9.057,2.354,11.476-3.374c1.535-3.632,2.207-7.544,2.553-11.434
+							c1.146-13.383,1.297-26.743-0.713-40.079c-1.234-8.323-5.922-13.711-14.227-15.286c-4.238-0.803-3.607-2.38-1.555-4.799
+							c3.564-4.172,6.916-6.769,13.598-6.769h50.111c7.889,1.557,9.641,5.101,10.721,13.039l0.043,55.663
+							c-0.086,3.073,1.535,12.192,7.07,14.226c4.43,1.448,7.35-2.096,10.008-4.905c11.998-12.734,20.561-27.783,28.211-43.366
+							c3.395-6.852,6.314-13.968,9.143-21.078c2.096-5.276,5.385-7.872,11.328-7.757l48.229,0.043c1.43,0,2.877,0.021,4.262,0.258
+							c8.127,1.385,10.354,4.881,7.844,12.817c-3.955,12.451-11.65,22.827-19.174,33.251c-8.043,11.129-16.645,21.877-24.621,33.072
+							C252.26,161.544,252.842,166.697,261.945,175.576L261.945,175.576z M261.945,175.576"/>
+					</svg>
+				</a>
+			</div>
+			<div class="telegram col-sm-auto">
+				<a href="#">
+					<svg width="48px" height="48px" viewBox="0 0 48 48" fill="#ffff" xmlns="http://www.w3.org/2000/svg"> <title>Цветочек в Telegram</title>
+						<path d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z"/>
+					</svg>
+
+				</a>
+			</div>
+		</div>
+		<hr>
+		<h6 class="text-center text-muted">© Цветочек</h6>
+		<h5 class="creator"><a class="text-muted" target="_blank" href="https://t.me/DelitelLZT">@DelitelLZT</a></h5>
+	</footer>
+
+	
+</body>
+</html>
