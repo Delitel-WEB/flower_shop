@@ -27,7 +27,7 @@ def get_categories():
     return res_categories
 
 
-def main_parse(pages=10):
+def main_parse(pages=11):
     categories = get_categories()
 
     prouctions = {}
@@ -58,7 +58,7 @@ def main_parse(pages=10):
                     product_description = prod_parse.find(class_="product-item-detail-tab-content").contents
                     for content_item in product_description:
                         if content_item.text != "<div>\n</div>" and content_item.text != "\n":
-                            product_description = content_item.text.strip()[:139] + "..."
+                            product_description = content_item.text.strip()
                             break
                     preview_image = prod_parse.find(class_="product-item-detail-slider-controls-block").contents[3].img["src"]
                     preview_image = f"{parse_url}{preview_image}"
@@ -122,6 +122,4 @@ elif args[1] == "load":
 elif args[1] == "create_tables":
     print("Создаём таблицы!")
     db.create_tables()
-
-
 

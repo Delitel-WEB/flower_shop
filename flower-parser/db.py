@@ -20,7 +20,7 @@ class MYSQLither:
                 (id INTEGER PRIMARY KEY AUTO_INCREMENT, name TEXT, amount INTEGER, category_id INTEGER, preview_image TEXT, description TEXT, count INTEGER)""")
 
         self.c.execute("""CREATE TABLE IF NOT EXISTS purchases
-                  (id INTEGER PRIMARY KEY AUTO_INCREMENT, client_id INTEGER, adress TEXT, purchase_amount INTEGER, status INTEGER)""")
+                  (id INTEGER PRIMARY KEY AUTO_INCREMENT, client_id INTEGER, product_id INTEGER, adress TEXT, purchase_amount INTEGER, status INTEGER)""")
 
     def get_category_by_name(self, category_name):
         self.c.execute("SELECT * FROM `categories` WHERE `category_name`=%s", (category_name,))
