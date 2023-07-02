@@ -1,13 +1,9 @@
 RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-# Убирает .html и .php в роутингах
-<IfModule mod_rewrite.c>
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule ^([^.]+)$ $1.php [NC,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule ^([^.]+)$ $1.html [NC,L]
-</IfModule>
-
-# Редирект при не нахождении страницы
-ErrorDocument 404 /page_not_found.html
